@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "alexkrechik.cucumberautocomplete",
+    "ms-azuretools.vscode-docker",
+    "eamodio.gitlens",
+    "sonarsource.sonarlint-vscode"
+  ],
+  "unwantedRecommendations": ["dbaeumer.vscode-eslint"]
+}

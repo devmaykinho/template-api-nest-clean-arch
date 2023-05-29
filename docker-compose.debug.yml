@@ -1,0 +1,30 @@
+version: '3'
+services:
+  api:
+    image: node:14-alpine
+    environment:
+      - ENVIRONMENT=local
+      - PORT=3000
+      - ENV_DATABASE_NAME=schedule
+      - MONGODB_CONNECTION_STRING=mongodb://root:MongoDByduqs!@mongo:27017
+      - LOG_LEVEL=info
+      - AWS_ACCESS_KEY_ID=AKIA3PW3EGHKB6UDJHCN
+      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_REGION=us-east-2
+    ports:
+      - '3000:3000'
+    command: npm run start:dev
+    working_dir: /app
+    volumes:
+      - '.:/app'
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.2.9
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: MongoDByduqs!
+      MONGO_INITDB_DATABASE: schedule
+    ports:
+      - '27017:27017'

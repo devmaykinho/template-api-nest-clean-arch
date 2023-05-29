@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="rzdXA0wmAp3S7YI-o238" name="Page-1">
+        <mxGraphModel dx="1188" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;fillColor=#18141D;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="40" width="350" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="endArrow=none;html=1;exitX=0.374;exitY=0.187;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.377;entryY=0.808;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="288.8899999999999" y="281" as="sourcePoint"/>
+                        <mxPoint x="540" y="276" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=none;html=1;exitX=0.751;exitY=0.379;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.754;entryY=0.626;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="148" as="sourcePoint"/>
+                        <mxPoint x="473" y="148" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Exploratorio" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="120" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Componente" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="393" y="200" width="65" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Unitário / Integração" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="393" y="340" width="65" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
