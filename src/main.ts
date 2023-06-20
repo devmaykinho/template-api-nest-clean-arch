@@ -1,6 +1,5 @@
 import * as cors from '@fastify/cors';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { FastifyAdapter } from '@nestjs/platform-fastify';
 import { contentParser } from 'fastify-multer';
@@ -29,10 +28,10 @@ const start = async () => {
     type: VersioningType.HEADER,
     header: 'x-perfil',
   });
-  const configService = nest.get(ConfigService);
-  const port = configService.get<number>('PORT') || 3000;
-  fastify.ready(() => console.log('Servindo na porta: ' + port));
-  await nest.listen(port, '0.0.0.0');
+  // const configService = nest.get(ConfigService);
+  // const port = configService.get<number>('PORT') || 3000;
+  fastify.ready(() => console.log('Servindo na porta: ' + 3000));
+  await nest.listen(3000, '0.0.0.0');
 };
 
 start();

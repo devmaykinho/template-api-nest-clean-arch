@@ -2,8 +2,6 @@ import { Module } from '@nestjs/common';
 import { APP_FILTER } from '@nestjs/core';
 import { ControllerModule } from './app/controller.module';
 import { AllExceptionsFilter } from './app/filters/custom-error-request.exception';
-import { ChassisModule } from './infra/chassis.module';
-import { InfraModule } from './infra/infra.module';
 
 @Module({
   providers: [
@@ -12,6 +10,6 @@ import { InfraModule } from './infra/infra.module';
       useClass: AllExceptionsFilter,
     },
   ],
-  imports: [InfraModule, ChassisModule, ControllerModule],
+  imports: [ControllerModule],
 })
 export class AppModule {}

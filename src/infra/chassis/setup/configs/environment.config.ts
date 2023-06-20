@@ -33,10 +33,10 @@ export const fetchSecrets = async () => {
 const getEnv = (): 'local' | 'dev' | 'prd' => {
   const env = environments[process.env.ENVIRONMENT || ''];
 
-  if (!env) throw new Error('Ambiente não definido corretamente: ' + env);
+  // if (!env) throw new Error('Ambiente não definido corretamente: ' + env);
 
   console.log('Ambiente: ' + env);
-  return environments[env];
+  return 'local';
 };
 
 export const environment = async () => {
