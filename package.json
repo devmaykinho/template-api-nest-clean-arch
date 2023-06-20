@@ -36,6 +36,7 @@
     "@nestjs/platform-express": "^9.3.12",
     "@nestjs/platform-fastify": "^9.3.12",
     "aws-sdk": "^2.1386.0",
+    "axios": "^1.4.0",
     "cache-manager": "^4.1.0",
     "chai": "^4.3.6",
     "class-transformer": "^0.5.1",
