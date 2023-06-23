@@ -24,11 +24,69 @@ export class ScheduleController {
       console.log('incio da requisicao');
       const response = await axios.post(url, data, { headers, timeout: 3000 });
       console.log('incio da requisicao');
-      console.log('RESULTADO=========', response.data); // Você pode fazer algo com a resposta da API externa aqui
+      console.log('RESULTADO=========', response.data.access_token); // Você pode fazer algo com a resposta da API externa aqui
+
+      const resultado = await this.teste(response.data.access_token);
+
+      console.log('resultado nf:::::', resultado.data);
+
       return 'ok';
     } catch (error) {
       console.error(error);
       throw new Error('Erro ao fazer a chamada para a API externa');
+    }
+  }
+
+  private async teste(token: string): Promise<any> {
+    const url = 'http://10.124.64.61:4664/cisspoder-service/documentos_fiscais_saida';
+    const accessToken = '16efe039-ebc1-4b1b-b26f-1d3ab38806d0';
+
+    const requestBody = {
+      clausulas: [
+        {
+          campo: 'numnota',
+          operadorlogico: 'AND',
+          operador: 'IGUAL',
+          valor: 183818,
+        },
+        {
+          campo: 'idempresa',
+          operadorlogico: 'AND',
+          operador: 'IGUAL',
+          valor: 202,
+        },
+        {
+          campo: 'dtemissao',
+          operadorlogico: 'AND',
+          operador: 'BETWEEN',
+          valor: ['2023-06-10', '2023-06-30'],
+        },
+      ],
+      ordenacoes: [
+        {
+          campo: 'numnota',
+          direcao: 'ASC',
+        },
+      ],
+    };
+
+    const headers = {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    };
+
+    const config: any = {
+      method: 'POST',
+      url: url,
+      headers: headers,
+      data: requestBody,
+    };
+
+    try {
+      const response = await axios(config);
+      console.log(response.data);
+    } catch (error) {
+      console.error('ERRO NFE::::', error);
     }
   }
 }
