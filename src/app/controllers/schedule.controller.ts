@@ -38,9 +38,7 @@ export class ScheduleController {
   }
 
   private async teste(token: string): Promise<any> {
-    const url = 'http://10.124.64.61:4664/cisspoder-service/documentos_fiscais_saida';
-    const accessToken = '16efe039-ebc1-4b1b-b26f-1d3ab38806d0';
-
+    const url = 'https://integracaonestle.dataciss.com.br/cisspoder-service/documentos_fiscais_saida';
     const requestBody = {
       clausulas: [
         {
