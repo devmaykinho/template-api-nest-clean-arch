@@ -24,7 +24,7 @@ export class ScheduleController {
       console.log('incio da requisicao');
       const response = await axios.post(url, data, { headers, timeout: 3000 });
       console.log('incio da requisicao');
-      console.log(response.data); // Você pode fazer algo com a resposta da API externa aqui
+      console.log('RESULTADO=========', response.data); // Você pode fazer algo com a resposta da API externa aqui
       return 'ok';
     } catch (error) {
       console.error(error);
