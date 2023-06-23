@@ -41,12 +41,12 @@ export class ScheduleController {
     const url = 'https://integracaonestle.dataciss.com.br/cisspoder-service/documentos_fiscais_saida';
     const requestBody = {
       clausulas: [
-        {
-          campo: 'numnota',
-          operadorlogico: 'AND',
-          operador: 'IGUAL',
-          valor: 183818,
-        },
+        // {
+        //   campo: 'numnota',
+        //   operadorlogico: 'AND',
+        //   operador: 'IGUAL',
+        //   valor: 183818,
+        // },
         {
           campo: 'idempresa',
           operadorlogico: 'AND',
