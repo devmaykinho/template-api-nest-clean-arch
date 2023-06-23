@@ -84,7 +84,7 @@ export class ScheduleController {
 
     try {
       const response = await axios(config);
-      console.log(response.data);
+      console.log('NFE:::::::::::::', response.data);
     } catch (error) {
       console.error('ERRO NFE::::', error);
     }
